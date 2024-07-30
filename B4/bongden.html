@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Light bulb</title>
+</head>
+<body style="text-emphasis: center;">
+    <h1>Light</h1>
+    <p>
+        <i id ="Light-Bulb"class="fa fa-lightbulb-o" style="font-size: 500px;" onclick="DoiMau()"></i>
+    </p>
+    <button id="onof" style="height: 40px; width: 60px;" onclick="DoiMau()">
+        On
+    </button>
+</body>
+</html>
+<script>
+    let LightBulb = document.getElementById('Light-Bulb');
+    LightBulb.style.color = "red";
+    let isOn = true;
+    let ButonONof = document.getElementById('onof')
+    function changeColor() {
+        isOn = !isOn 
+        if (isOn){
+            LightBulb.style.color = "red"
+            ButonONof.innerHTML = "Off"
+        } else{
+            LightBulb.style.color = "black"
+            ButonONof.innerHTML = "On"
+            
+        }
+
+    }
+    function DoiMau(){
+        for (let i = 0 ; i < 1000 ; i ++){
+        if(i % 2 == 0){
+        LightBulb.style.color = "red"
+        setTimeout(() => {}, 1000);
+        }
+        else{
+            LightBulb.style.color = "green"
+            setTimeout(() => {}, 1000);    
+        }
+    }
+    }
+
+</script>

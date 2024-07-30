@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background left"></div>
+    <div class="background right"></div>
+    
+    <div class="content">
+        <div class="logo-btec"> 
+            <img src="Logo-Btec.png" alt="" style="width: 100px; height: 70px;"> 
+        </div>
+        <h1>Survey Form</h1>
+        <!-- Create form -->
+        <form>
+            <!-- Details -->
+            <div class="form-control">
+                <label for="name">Your name:</label>
+                <input type="text" name="name" id="name" placeholder="Fill your name">
+            </div>
+            <div class="form-control">
+                <label for="email">Your email:</label>
+                <input type="email" name="email" id="email" placeholder="Fill your email">
+            </div>
+            <div class="form-control">
+                <label for="age">Your age:</label>
+                <input type="number" name="age" id="age" placeholder="Fill your age">
+            </div>
+            <div class="form-control">
+                <label for="role" id="label-role">Your role:</label>
+                <select name="role" id="role">
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="professor">Professor</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="recommend">Would you like to recommend IT club for your friends?</label>
+                <br>
+                <label for="recommend-1">
+                    <input type="radio" name="recommend" id="recommend-1"> Yes
+                </label>
+                <label for="recommend-2">
+                    <input type="radio" name="recommend" id="recommend-2"> Yes of course
+                </label>
+                <label for="recommend-3">
+                    <input type="radio" name="recommend" id="recommend-3"> Maybe
+                </label>
+            </div>
+            <div class="form-control">
+                <label for="comment">Describe yourself:</label>
+                <textarea name="comment" id="comment"></textarea>
+            </div>
+            <button type="submit" value="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+     overflow: auto;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1; /* Đặt thấp hơn nội dung */
+}
+
+.left {
+    left: 0;
+    background-color: #ffffff; /* Màu trắng */
+}
+
+.right {
+    right: 0;
+    background-color: #ff5722; /* Màu cam */
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Đặt cao hơn nền */
+    padding: 20px;
+    color: #000;
+    /* Căn chỉnh nội dung sang bên trái */
+    margin-left: 0;
+    text-align: left; /* Căn chỉnh nội dung bên trái */
+}
+
+.logo-btec {
+    max-width: 50px;
+    margin: 5px 0;
+    padding: 30px 20px;
+}
+
+form {
+    background-color: bisque;
+    max-width: 500px;
+    margin: 50px 0; /* Căn chỉnh form về bên trái và giữ khoảng cách trên và dưới */
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    /* Căn chỉnh form sang bên trái */
+    float: left; 
+    /* Hoặc sử dụng `margin-left` nếu bạn cần chính xác hơn */
+}
+
+.form-control {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-control input,
+textarea,
+select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-control input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+</style>

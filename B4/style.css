@@ -1,0 +1,20 @@
+nav{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+    transition: width 2s;
+    width: 0;
+
+}
+nav ul{
+    color: #000;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+.show{
+    width: 250px;
+}

@@ -1,0 +1,178 @@
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Colored Background with Content</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background left"></div>
+    <div class="background right"></div>
+    <div class="content"> </div>
+
+    <div class="logo-btec"> 
+        <img src="Logo-Btec.png" alt="" style="width: 100px; height: 70px;" > 
+    </div>
+    <!-- <h1>Survey form</h1> -->
+    <!-- Create form -->
+     
+    <form>
+        
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name">Your name:</label>
+            <input type="text" name="name" id="name" 
+            placeholder="Fill your name">
+        </div>
+        <div class="form-control">
+            <label for="email">Your email:</label>
+            <input type="email" name="email" id="email" 
+            placeholder="Fill your email">
+        </div>
+        <div class="form-control">
+            <label for="age">Your age:</label>
+            <input type="number" name="age" id="age" 
+            placeholder="Fill your age">
+        </div>
+        <div class="form-control">
+            <label for="role" id="label-role">
+                Your role:
+            </label>
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="professor">Professor</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label for="recommend">
+                Would you like to recommend IT club for your friends?
+            </label>
+            <br>
+            <label for="recommend-1">
+                <input type="radio" name="recommend" id="recommend-1">Yes</input>
+            </label>
+            <label for="recommend-2">
+                <input type="radio" name="recommend" id="recommend-2">Yes of course</input>
+            </label>
+            <label for="recommend-3">
+                <input type="radio" name="recommend" id="recommend-3">Maybe</input>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label for="comment">Describe yourself:</label>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+    <div class="banner">
+        <img src="Banner.png" alt="Banner"style="width: 700px; height: 400px;">
+    </div>
+    <div class="child"> BTEC x BIT </div>
+</body>
+
+</html>
+<style>
+
+    .logo-btec{
+
+        max-width: 50px;
+        margin: 5px ;
+        padding: 30px 20px;
+
+    }
+    body {
+        /* background-color: aquamarine; */
+        font-family: sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: auto; 
+    }
+    .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: -1; 
+}
+
+.left {
+    left: 0;
+    background-color: #ffffff; 
+}
+
+.right {
+    right: 0;
+    background-color: #ff5722; 
+}
+
+.content {
+    position: relative;
+    z-index: -1; 
+    padding: 20px;
+    text-align: center;
+    color: #000;
+}
+    form {
+        background-color:bisque;
+        max-width: 500px;
+        margin: 50px ;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    .form-control {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .form-control input, textarea, select {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+        padding: 10px;
+        display: block;
+        width: 100%;
+    }
+    textarea {
+        resize: vertical;
+    }
+    .form-control input[type="radio"] {
+        display: inline-block;
+        width: auto;
+    }
+    .form-control label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .banner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 800px; 
+    height: 500px; 
+    z-index: 3; 
+}
+.child{
+        background-color: rgb(238, 172, 96);
+        opacity: 0.6;
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        left: 0%;
+        bottom: 0%;
+        text-align: center;
+        font-size: 30px;
+        color: rgb(66, 2, 2);
+    }
+    
+
+</style>
